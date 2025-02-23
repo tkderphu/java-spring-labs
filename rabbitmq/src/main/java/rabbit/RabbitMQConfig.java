@@ -3,6 +3,8 @@ package rabbit;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,15 +19,7 @@ public class RabbitMQConfig {
 
     @Bean
     public Queue myQueue() {
-        return QueueBuilder.durable(QUEUE)
-                .deadLetterExchange(EXCHANGE)
-                .deadLetterRoutingKey(DEAD_ROUTING_QUEUE)
-                .build();
-    }
-
-    @Bean
-    public Queue deadQueue() {
-        return new Queue(DEAD_QUEUE);
+        return new Queue(QUEUE);
     }
 
 
@@ -39,10 +33,5 @@ public class RabbitMQConfig {
         return BindingBuilder.bind(myQueue()).to(directExchange()).with(ROUTING_QUEUE);
     }
 
-
-    @Bean
-    public Binding bindingDeadQueue() {
-        return BindingBuilder.bind(deadQueue()).to(directExchange()).with(DEAD_ROUTING_QUEUE);
-    }
 
 }

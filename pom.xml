@@ -14,6 +14,18 @@
     <module>validation-lab</module>
       <module>log-back</module>
       <module>concepcoding</module>
+      <module>tenant</module>
+    <module>gate-way</module>
+    <module>grpc</module>
+    <module>grpc/user-service</module>
+    <module>grpc/service-producer</module>
+    <module>grpc/service-consumer</module>
+    <module>rabbit-lab</module>
+    <module>rabbit-lab/lab1</module>
+    <module>rabbit-lab/lab2</module>
+    <module>rabbit-lab/lab3</module>
+    <module>my-batis</module>
+    <module>my-batis/my-batis-annotation</module>
   </modules>
   <version>1.0-SNAPSHOT</version>
   <name>java-spring-labs Maven Webapp</name>
@@ -28,6 +40,7 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
   <build>
     <finalName>java-spring-labs</finalName>
@@ -35,6 +48,14 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
       </plugin>
     </plugins>
   </build>

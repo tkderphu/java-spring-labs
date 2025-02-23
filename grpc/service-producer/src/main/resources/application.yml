@@ -1,0 +1,11 @@
+grpc:
+    #GrpcServerProperties
+  server:
+    port: 9090 #cong ngau nhien
+
+spring:
+  application:
+    name: user-service
+
+server:
+  port: 9091 # cong ngau nhien

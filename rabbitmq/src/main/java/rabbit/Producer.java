@@ -14,12 +14,12 @@ public class Producer {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    public void syncSend(String message) {
-        rabbitTemplate.convertAndSend(
-                RabbitMQConfig.EXCHANGE,
-                RabbitMQConfig.ROUTING_QUEUE,
-                message
-        );
+    public void syncSend(Message message) {
+//        rabbitTemplate.convertAndSend(
+//                RabbitMQConfig.EXCHANGE,
+//                RabbitMQConfig.ROUTING_QUEUE,
+//                message
+//        );
     }
 
 }

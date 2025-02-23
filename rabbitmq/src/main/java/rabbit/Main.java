@@ -16,7 +16,10 @@ public class Main implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         for(int i = 0; i < 10; i++) {
-            producer.syncSend("hello world " + i);
+            Message message = new Message();
+            message.setId(i + "");
+            message.setMessage("hello world " + i);
+            producer.syncSend(message);
         }
     }
 }
