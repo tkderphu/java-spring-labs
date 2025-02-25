@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="viosmash.mappers.PersonMapper">
+    <!--reuse field for retrieve-->
+    <sql id="FIELDS">
+        id, username, password, created_time
+    </sql>
+
+    <insert id="insert" parameterType="viosmash.dataobject.PersonDO" useGeneratedKeys="true" keyProperty="true">
+        INSERT INTO persons(username, password, created_time)
+        VALUES (#{username}, #{password}, #{created_time})
+    </insert>
+
+    <delete id="deleteById" parameterType="Integer">
+        DELETE FROM persons where id =#{id}
+    </delete>
+
+    <select id="selectByUsername" parameterType="String" resultType="viosmash.dataobject.PersonDO">
+        SELECT <include refid="FIELDS"/>
+        FROM persons
+        WHERE username = #{username}
+    </select>
+
+</mapper>

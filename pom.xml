@@ -26,6 +26,8 @@
     <module>rabbit-lab/lab3</module>
     <module>my-batis</module>
     <module>my-batis/my-batis-annotation</module>
+    <module>my-batis/my-batis-xml</module>
+    <module>my-batis/my-batis-pluss</module>
   </modules>
   <version>1.0-SNAPSHOT</version>
   <name>java-spring-labs Maven Webapp</name>

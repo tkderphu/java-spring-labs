@@ -12,6 +12,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/java-core/pom.xml" />
+        <option value="$PROJECT_DIR$/my-batis/my-batis-plus/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-api-gateway/pom.xml" />
       </set>
     </option>
