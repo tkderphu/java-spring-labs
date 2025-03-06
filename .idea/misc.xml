@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/rabbit-lab/rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/webflux/pom.xml" />
+        <option value="$PROJECT_DIR$/webflux/webflux-app/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
