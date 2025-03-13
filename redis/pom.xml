@@ -6,13 +6,12 @@
         <artifactId>java-spring-labs</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>elasticsearch</artifactId>
+    <artifactId>redis</artifactId>
     <packaging>pom</packaging>
-    <name>elasticsearch Maven Webapp</name>
+    <name>redis Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>elasticsearch-practice</module>
-        <module>elasticsearch-jpa</module>
+        <module>redis-cache</module>
     </modules>
     <dependencies>
         <dependency>
@@ -23,6 +22,6 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>elasticsearch</finalName>
+        <finalName>redis</finalName>
     </build>
 </project>

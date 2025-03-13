@@ -1,12 +1,26 @@
 package viosmash;
 
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
-public class ConnectToElastic {
+@SpringBootApplication
+public class ConnectToElastic implements CommandLineRunner {
+    private final P p;
+
+    public ConnectToElastic(P p) {
+        this.p = p;
+    }
+
     public static void main(String[] args) throws IOException {
-        Elasticsearch elasticsearch = new Elasticsearch();
+        SpringApplication.run(ConnectToElastic.class, args);
+
+//        Elasticsearch elasticsearch = new Elasticsearch();
 //        elasticsearch.createIndex("my_index");
 //        User user = new User();
 //        user.setUsername("tes");
@@ -49,6 +63,11 @@ public class ConnectToElastic {
 
 //        elasticsearch.searchProduct();
 
-        elasticsearch.aggregationPrice();
+//        elasticsearch.aggregationPrice();
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        p.push();
     }
 }
