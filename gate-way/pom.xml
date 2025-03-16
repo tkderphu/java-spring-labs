@@ -7,36 +7,22 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>gate-way</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>gate-way Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>api-gateway</module>
+        <module>test-service</module>
+        <module>security</module>
+        <module>auth-service</module>
+        <module>auth-service-api</module>
+    </modules>
     <properties>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-gateway</artifactId>
-        </dependency>
     </dependencies>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
     <build>
         <finalName>gate-way</finalName>
     </build>
