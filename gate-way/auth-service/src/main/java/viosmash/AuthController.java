@@ -11,6 +11,8 @@ import java.util.UUID;
 @RequestMapping("/api/auth")
 public class AuthController {
 
+
+
     @GetMapping("/login/{role}")
     public AuthLoginResp login(@PathVariable("role") Role role) {
         AuthLoginResp resp = new AuthLoginResp();

@@ -12,7 +12,7 @@ public class Cache {
     public static AuthLoginResp getByToken(String token) {
         AuthLoginResp authLoginResp = LIST_AUTH.stream().filter(r -> r.getToken().equals(token))
                 .findFirst().orElseThrow(() -> new RuntimeException("not found token"));
-        if(authLoginResp.getExpiredAt() > System.currentTimeMillis()) {
+        if(authLoginResp.isExpired()) {
             throw new RuntimeException("token is expired");
         }
         return authLoginResp;

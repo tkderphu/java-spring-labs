@@ -2,7 +2,7 @@ package viosmash;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-public class AuthLoginResp{
+public class AuthLoginResp {
     private String id;
     private Long expiredAt;
     private String token;
@@ -43,5 +43,16 @@ public class AuthLoginResp{
     }
     public void setExpiredAt(Long expiredAt) {
         this.expiredAt = expiredAt;
+    }
+
+
+    @Override
+    public String toString() {
+        return "AuthLoginResp{" +
+                "id='" + id + '\'' +
+                ", expiredAt=" + expiredAt +
+                ", token='" + token + '\'' +
+                ", role=" + role +
+                '}';
     }
 }
