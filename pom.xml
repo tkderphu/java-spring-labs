@@ -35,6 +35,11 @@
       <module>elasticsearch</module>
       <module>redis</module>
     <module>google-guava-api</module>
+    <module>spring-data</module>
+      <module>time-series</module>
+      <module>monitor</module>
+    <module>reactive</module>
+      <module>virtualization</module>
   </modules>
   <version>1.0-SNAPSHOT</version>
   <name>java-spring-labs Maven Webapp</name>
@@ -43,10 +48,22 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>com.viosmash</groupId>
+          <artifactId>reactive</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>com.viosmash</groupId>
+          <artifactId>reactive</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
