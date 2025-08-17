@@ -5,23 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.viosmash</groupId>
-        <artifactId>java-spring-labs</artifactId>
+        <artifactId>virtualization</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>virtualization</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>lab1_kmv_qemu</module>
-        <module>lab2_kmv_qemu_api</module>
-        <module>lab3_ovs</module>
-        <module>lab3_sdn_controller</module>
-    </modules>
-
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.libvirt/libvirt -->
-
-    </dependencies>
+    <artifactId>lab3_sdn_controller</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
