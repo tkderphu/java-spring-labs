@@ -40,6 +40,9 @@
       <module>monitor</module>
     <module>reactive</module>
       <module>virtualization</module>
+      <module>spring-security</module>
+      <module>spring-review</module>
+      <module>spring-quartz</module>
   </modules>
   <version>1.0-SNAPSHOT</version>
   <name>java-spring-labs Maven Webapp</name>

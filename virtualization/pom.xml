@@ -16,6 +16,7 @@
         <module>lab2_kmv_qemu_api</module>
         <module>lab3_ovs</module>
         <module>lab3_sdn_controller</module>
+        <module>lab4_another_sample_libvirt</module>
     </modules>
 
     <dependencies>
